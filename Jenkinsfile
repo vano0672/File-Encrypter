@@ -24,6 +24,7 @@ pipeline {
                 sh '''
                 echo "Running JUnit tests for File-Encrypter..."
                 cd "Password Protection"
+		rm -f junit-platform-console-standalone.jar
 
                 # Download JUnit jar if not already present
                 if [ ! -f junit-platform-console-standalone.jar ]; then
